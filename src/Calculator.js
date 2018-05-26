@@ -118,7 +118,7 @@ class Calculator extends Component {
               <div className="button right" onClick={() => this.performOperation('+')}>+</div>
               <div className="button classic zero" onClick={() => this.inputDigit(0)}>0</div>
               <div className="button classic" onClick={() => this.inputDot()}>.</div>
-              <div className="button right" onClick={() => this.performOperation('=')}>=</div>
+              <div className="button right equals" onClick={() => this.performOperation('=')}>=</div>
             </div>
           </div>
       );

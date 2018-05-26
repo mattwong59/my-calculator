@@ -1,5 +1,5 @@
 body {
-  background-color: aliceblue;
+  background-color: #2F2B2D;
 }
 
 .App {  
@@ -14,7 +14,6 @@ body {
   background: darken( $orange, 5% );
   line-height: 60px;  
   font-size: 1.25em;  
-  border: 1px solid black;  
   cursor: pointer;  
   display: flex;  
   flex-wrap: wrap;  
@@ -22,41 +21,48 @@ body {
 }
 
 .button {  
-  background: #ede8f9;  
-  color: black;  
+  background: #8DD2C6;  
+  color: #2F2B2D;  
   display: flex;  
   justify-content: center;  
   flex: 0 1 25%;
 }
 
 .button.top {  
-  background: #ede8f9;
+  background: #8DD2C6;
 } 
 
 .button:hover {
+  background: #9be9dc;
   opacity: 0.8;
 }
 
 .button.right {  
-  background: #b291ff;  
+  background: #8DD2C6;  
   color: white;
+}
+
+.button.right.equals {
+  border-radius: 0 0 1rem 0;
 }
 
 .button.classic.zero {  
   flex: 2;
+  border-radius: 0 0 0 1rem;
 }
 
 .calculator {  
-  font-family: 'Open Sans', sans-serif;  
+  font-family: 'Indie Flower', cursive;
   width: 300px;  
   display: flex;  
   flex-wrap: wrap;
 }
 
 .display {  
-  background: #bcbcbc;  
-  color: white;  
-  padding-right: 10px;  
+  background: #F8F9F8;  
+  color: #2F2B2D;  
+  padding-right: 10px;
+  border-radius: 1rem 1rem 0 0;  
   font-weight: 100;  
   font-size: 4em; 
   line-height: 90px;  
