@@ -12,7 +12,7 @@ body {
   backface-visibility: true;
   background: linear-gradient(135deg, #f86b72 0%,#79f1fc 100%);
   line-height: 60px;  
-  font-size: 1.25em;  
+  font-size: 1.5em;  
   cursor: pointer;  
   display: flex;  
   flex-wrap: wrap;  
