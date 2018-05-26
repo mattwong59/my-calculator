@@ -100,10 +100,10 @@ class Calculator extends Component {
           <div className="calculator">
             <div className="display">{ displayValue }</div>
             <div className="buttons">
-              <div className="button top" onClick={() => this.clearDisplay()}>AC</div>
+              <div className="button top" id="ac" onClick={() => this.clearDisplay()}>AC</div>
               <div className="button top" onClick={() => this.toggleSign()}>±</div>
               <div className="button top" onClick={() => this.inputPercent()}>%</div>
-              <div className="button right" onClick={() => this.performOperation('/')}>÷</div>
+              <div className="button right" id="divide" onClick={() => this.performOperation('/')}>÷</div>
               <div className="button classic" onClick={() => this.inputDigit(7)}>7</div>
               <div className="button classic" onClick={() => this.inputDigit(8)}>8</div>
               <div className="button classic" onClick={() => this.inputDigit(9)}>9</div>
@@ -118,7 +118,7 @@ class Calculator extends Component {
               <div className="button right" onClick={() => this.performOperation('+')}>+</div>
               <div className="button classic zero" onClick={() => this.inputDigit(0)}>0</div>
               <div className="button classic" onClick={() => this.inputDot()}>.</div>
-              <div className="button right equals" onClick={() => this.performOperation('=')}>=</div>
+              <div className="button right" id="equals" onClick={() => this.performOperation('=')}>=</div>
             </div>
           </div>
       );
