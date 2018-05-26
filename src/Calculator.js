@@ -3,6 +3,7 @@ import './App.css';
 
 class Calculator extends Component {
     state = {
+        value: null,
         displayValue: '0',
         waitingForOperand: false,
         operator: null
@@ -60,14 +61,37 @@ class Calculator extends Component {
         })
     }
 
-    performOperation(operator) {
-        const { displayValue } = this.state
+    performOperation(nextOperator) {
+        const { displayValue, operator, value } = this.state
+        const nextValue = parseFloat(displayValue)
+
+        const operations = {
+            "/": (previousValue, nextValue) => previousValue / nextValue,
+            "*": (previousValue, nextValue) => previousValue * nextValue,
+            "-": (previousValue, nextValue) => previousValue - nextValue,
+            "+": (previousValue, nextValue) => previousValue + nextValue,
+            "=": (previousValue, nextValue) => nextValue
+        }
+
+        if (value === null) {
+            this.setState({
+                value: nextValue
+            })
+        } else if (operator) {
+            const currentValue = value || 0
+            const computedValue = operations[operator](currentValue, nextValue)
+            this.setState({
+                value: computedValue,
+                displayValue: String(computedValue)
+            })
+        }
         this.setState({
             waitingForOperand: true,
-            operator: operator
+            operator: nextOperator
         })
-        
     }
+        
+
 
 
     render() {
@@ -83,7 +107,7 @@ class Calculator extends Component {
               <div className="button classic" onClick={() => this.inputDigit(7)}>7</div>
               <div className="button classic" onClick={() => this.inputDigit(8)}>8</div>
               <div className="button classic" onClick={() => this.inputDigit(9)}>9</div>
-              <div className="button right" onClick={() => this.performOperation('x')}>×</div>
+              <div className="button right" onClick={() => this.performOperation('*')}>×</div>
               <div className="button classic" onClick={() => this.inputDigit(4)}>4</div>
               <div className="button classic" onClick={() => this.inputDigit(5)}>5</div>
               <div className="button classic" onClick={() => this.inputDigit(6)}>6</div>

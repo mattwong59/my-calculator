@@ -1,10 +1,17 @@
+body {
+  background-color: aliceblue;
+}
+
 .App {  
   display: flex;  
   justify-content: center;  
   padding-top: 5%;
 }
 
+
 .buttons {  
+  backface-visibility: true;
+  background: darken( $orange, 5% );
   line-height: 60px;  
   font-size: 1.25em;  
   border: 1px solid black;  
