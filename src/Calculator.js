@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import AutoShrinkingText from 'AutoShrinkingText.js'
 import './App.css';
 
 class Calculator extends Component {
@@ -91,13 +92,11 @@ class Calculator extends Component {
         })
     }
         
-
-
-
     render() {
         const { displayValue } = this.state;
       return (
           <div className="calculator">
+            {/* <AutoShrinkingText></AutoShrinkingText> */}
             <div className="display">{ displayValue }</div>
             <div className="buttons">
               <div className="button top" id="ac" onClick={() => this.clearDisplay()}>AC</div>

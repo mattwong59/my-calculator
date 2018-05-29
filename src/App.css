@@ -1,23 +1,23 @@
 body {
-  background-color: #2F2B2D;
+  background-color: #84c4f8
 }
 
 .App {  
   display: flex;  
   justify-content: center;  
-  padding-top: 5%;
+  padding-top: 20%;
 }
 
 .buttons {  
   backface-visibility: true;
-  background: linear-gradient(135deg, #f86b72 0%,#79f1fc 100%);
+  background: linear-gradient(135deg, #fcec0d 0%,#41e6f5 100%);
   line-height: 60px;  
   font-size: 1.5em;  
   cursor: pointer;  
   display: flex;  
   flex-wrap: wrap;  
   flex: 0 1 100%;
-  
+  border-radius: 0 0 1rem 1rem;
   cursor: pointer;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 .button:hover {
-  background: #9be9dc;
+  background: #c3fff5;
   opacity: 0.8;
 }
 
@@ -37,10 +37,13 @@ body {
   color: white;
 }
 
-
-
 .button.classic.zero {  
   flex: 2;
+  border-radius: 0 0 0 1rem;
+}
+
+#equals {
+  border-radius: 0 0 1rem 0;
 }
 
 .calculator {  
@@ -48,10 +51,12 @@ body {
   width: 300px;  
   display: flex;  
   flex-wrap: wrap;
+  border: 1px solid grey;
+  border-radius: 1rem;
 }
 
 .display {  
-  background: #F8F9F8;  
+  background: rgb(255, 255, 255);  
   color: #2F2B2D;  
   padding-right: 10px;
   font-weight: 100;  
@@ -60,6 +65,7 @@ body {
   justify-content: flex-end;  
   display: flex;  
   flex-wrap: wrap; 
-  opacity: 0.8; 
+  border-bottom: 1px solid grey;
+  border-radius: 1rem 1rem 0 0; 
   flex: 1 100%;  
 }
