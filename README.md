@@ -1,6 +1,7 @@
 # React-Calculator
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Help for this project was provided by https://www.youtube.com/watch?v=ZtU7Mhf9vN8.
 
 This is a fully functioning calculator that is able to perform all the simple operations. Every button is fully functional.
 
