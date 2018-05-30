@@ -27,7 +27,6 @@ class Calculator extends Component {
 
     inputDot() {
         const { displayValue, waitingForOperand } = this.state
-
         if (waitingForOperand) {
             this.setState ({
                 displayValue: '.',
