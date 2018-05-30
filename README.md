@@ -1,4 +1,4 @@
-#React-Calculator
+# React-Calculator
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -12,5 +12,5 @@ While building this app I was able to practice my React.js and CSS.
 2. Start the react app using the `npm start` command. The app will be served at <http://localhost:3000/>.
 4. Go to <http://localhost:3000/> in your browser.
 
-##Final Product 
+## Final Product 
 !["React Calculator"](https://github.com/mattwong59/my-calculator/blob/master/docs/react-calculator.png)
